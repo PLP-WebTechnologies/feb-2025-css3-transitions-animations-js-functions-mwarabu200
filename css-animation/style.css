@@ -1,0 +1,81 @@
+/* Style the entire page */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark .container {
+  background-color: #1e1e1e;
+}
+
+
+/* Center the container */
+.container {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the heading */
+#title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 0.8s ease-in-out;
+}
+
+/* Style the button */
+#themeToggle {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#themeToggle:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Style the image */
+#animatedImage {
+  margin-top: 20px;
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+/* Animation triggered via JavaScript */
+#animatedImage.animate {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* Optional keyframe animation for header */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
